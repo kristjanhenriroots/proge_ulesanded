@@ -1,0 +1,26 @@
+Ülesanne 3
+
+Algoritmi keerukust iseloomustab O notatsioon juhul kui probleem hõlmab n elementi. O notatsiooniga hinnatakse operatsioonide hulka, mida algoritm teeb vastavalt lähteinformatsiooni suurusele. Näiteks algoritm keerukusega O(n) on keerukuselt lineaarne ehk kasvab sama sammuga kui informatsiooni hulk ( O(2) = 2 "sammu" ), O(log(n)) aga kasvab logaritmilise keerukusega jne.
+
+Ületäitumine juhtub, kui operatisooni tulemusena ei mahu vastus enam kasutuses olevasse andmetüüpi, näiteks arvud üle 255 8 bitistes täisarvus. Teoorias võib see olla ka reaalarvude probleem, kuid nende jaoks peavad arvud olema väga suured.
+
+Unsigned int tohib olla ainult positiivne, ta ei hoia endas infot märgi kohta ning jääb lõpmatuseni printima nullini jõudes. Kasutada oleks vaja andmetüüpi int või lõpetada printimine 1 juures.
+
+break lõpetab käimas oleva tsükli koheselt, continue läheb nö "järgmisele ringile".
+
+Nt:
+for(i = 0; i < x; i++){
+	if(a < b)
+		continue; // i++ ja järgmisi asjad jätab vahele
+	if(a == b)
+		break; // väljub for tsüklist täielikult, vahet pole mis i on
+}
+
+void* viitab sellele allutatud muutuja aadressile mälus.
+
+Nt:
+
+int a = 10;
+void* b = &a;
+
+b viitab nüüd muutuja a aadressile mälus.

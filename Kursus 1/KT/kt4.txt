@@ -1,0 +1,5 @@
+Float, ainult täisarvud ei sobi, kuna kartulid ei kaalu täpselt kilodes
+
+String muutujasse, muutujale on vaja eelnevalt lisamuutujat pikkuse jaoks. Nt string kt[5].
+
+Kahendotsingu kasutamise jaoks tuleks andmed sorteerida eelnevalt näiteks qsorti kasutades. Terve sortimata massiivi läbikäimiseks on elemente liiga palju, et see mõistlik oleks.

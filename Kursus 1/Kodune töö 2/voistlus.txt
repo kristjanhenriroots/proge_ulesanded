@@ -1,0 +1,27 @@
+8	
+Juku	49.8
+Meelis	51.0
+Peeter	47.5
+Test	6.6
+Ats	47.7
+Paul	49.2
+Anti	50.5
+Peep	49.5
+8	
+Meelis	35.2
+Juku	33.7
+Peeter	32.9
+Paul	31.0
+Ats	37.1
+Teet	36.5
+Peep	37.1
+Anti	33.3
+8	
+Juku	56.6
+Peeter	59.2
+Teet	53.3
+Ats	51.0
+Paul	49.9
+Mart	57.1
+Meelis	55.4
+Anti	54.2

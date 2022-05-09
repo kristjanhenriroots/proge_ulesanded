@@ -1,0 +1,47 @@
+1. Mille jaoks kasutatakse typedef? On seda ilmtingimata vaja? Tooge mõni näide.
+
+Typedef kasutatakse sellepärast, et kirjapilt on parem kui pikalt struktuuri ja muutuja nimesid kirjutada. Seda ei ole vaja kasutada, lihtsalt on mugavam ning lühem. On olemas ka juba defineeritud tüüpe nagu size_t ja time_t.
+
+struct struktuuri_nimi{
+	tüüp välja_nimi;
+	tüüp välja_nimi2;
+} muutuja_nimi;
+
+struct struktuuri_nimi muutuja2;
+
+Näiteks saab selle asemel kirjutada nii
+
+typedef struct {/*väljad*/} tüübi_nimi;
+
+tüübi_nimi muutuja; // palju lühem muutuja deklareerimine
+
+2. Miks peaks avatud faili sulgema? Mis eelised / puudused sellel on?
+
+Oleks ilus sulgeda fail ja vabastada mälu peale selle kasutamist, nii sulgeb ka operatsioonisüsteem sellele allutatud descriptori. Muidu võib juhtuda olukordi, kus sulgemata descriptorid kuhjuvad ning fopen ei õnnestu.
+
+3. Kirje väli võib olla omakorda kirje. Kas siin on ka mingeid piiranguid? Kuidas selle alamkirje
+poole pöördutakse?
+
+Kirje väli võib olla omakorda kirje, kuid mida sügavamale see läheb seda rohkem aega kulub operatsioonidele. Otsest limiiti ei ole, kuid ei ole soovitatav. Alamkirje poole pöördutakse nagu kirje elemendi poole.
+
+Näitena kasutan tarkvara projekti koodi.
+
+typedef struct data{
+    int **maze; // maze matrix
+}data_t;
+
+typedef struct dataArr{
+    int exits[4]; // mark entrance and exit coordinates
+    int size; // maze size
+    int algoCount; // the number of solving algorithms + 1 for generation
+    data_t *algo; // array of maze matrixes
+}maze_t;
+
+Näiteks kui ma soovin kätte saada kolmanda maatriksi viimast elementi:
+
+maze_t data;
+data.algo[algoCount - 1].maze[size - 1][size - 1];
+
+ning alamprogrammis viitega
+
+data->algo[algoCount - 1].maze[size - 1][size - 1];
