@@ -1,0 +1,77 @@
+PROGRAM CODE IN SEPARATE REPO
+
+people
+- person_id (PK)
+- name
+- nationality			(optional for reviewers)
+
+
+reviewer
+- id (PK)
+- name
+- publication 			(optional, for reviewer)
+
+movies
+- id (PK)
+- name			(unique)
+- year
+- duration			(in minutes)
+- studio
+- language
+- age_rating
+- IMDb_score 		(maybe)
+- short_description		(maybe)
+
+
+movie_genres
+- id
+- genre_id (FK)
+- movie_id (FK)
+
+genres
+- id
+- name
+
+characters
+- character_id (PK)		
+- character_name		(optional, only used for actors)
+- person_id (FK)		(both unique)
+- movie_id (FK)
+- profession 			(actor, director)
+
+review
+- review_id (PK)
+- movie_id (FK)
+- person_id (FK)
+- grade
+- text review			(hmm, maybe)
+
+
+Functionality
+- see all input data
+- add a director
+	- has to be unique
+- add a movie 
+	- has to be unique
+	- has to be tied to director
+- edit a movie, change fields
+- add a reviewer
+	- unique
+- add a review
+	- tied with movie
+	- tied with reviewer
+- delete review
+	- use movie id and reviewer id
+
+- search by
+	- year
+		- sort by rating
+	- optional additional fields
+- Top 5
+	- according to users
+	- according to reviewers
+- publications
+	- show average rating by year
+
+
+
