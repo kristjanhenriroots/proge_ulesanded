@@ -1,0 +1,12 @@
+1. Calloc lisaks mälu andmisele nullib selle ka ise ära. Nagu näiteks mingile dünaamilisele täisarvude massiivile mälu
+andes callociga on kõik massiivi elemendid algselt nullid. Aitab ära hoida olukordi, kus hiljem midagi massiiviga tehes programm kokku
+jookseb, sest elemendiks ei ole midagi pandud ning mallociga oleks see NULL.
+
+2. Muidugi numbrite puhul, mis char kujul lihtsalt atoi kasutades täisarv kujule saab. Aga muidu sobivad ainult üksikud char tüübid. 
+Näiteks char C = 'c', siis on võimalik võrrelda otse if(C == 'c') jne. Muidu võrreldakse stringi pointeriga.
+
+3. Materialized view on vaate ehk view, mis salvestab päringu objekti vaate ning kõik muutused algtabelis kajastuvad ka vaates, ning
+tabeli loomise päringuna, mis loob koopia tabelist kuhu algtabeli muutused ei kajastu, vahepealne asi. Materialiseeritud vaate korral
+luuakse päringuga samuti koopia tabelist, kuid säilitatakse ka päringu info. Materialiseeritud vaade ei värskenda end ise vaid seda on vaja teha käsklusega. Tavalisest vaatest erineb see defineeritavate indeksite poolest.
+
+4. Sobivad variandid A ning D. A määrab *c -le pointeri algse massiivi viiendale elemendile, variant C määrab lihtsalt viienda elemendi. D sobib, sest annab *c -le algse massiivi pointeri + 5, ehk viitab sama moodi nagu variant A. 
